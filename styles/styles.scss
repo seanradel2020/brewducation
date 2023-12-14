@@ -1,0 +1,409 @@
+
+$primary-color: #235391;
+$secondary-color: #ffd182;
+$tertiary-color: #FFFFFF;
+$darktext-color: #000;
+$background-light:#bcbcbc;
+$font-link-followed:rgba(255, 255, 255, 0.2);
+$font-link-focus:rgba(255, 255, 255, 0.4);
+
+$font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+$secondary-font-famiy:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+$minmargin: 0;
+$minpadding:0;
+$floatmargin:0 auto;
+
+$font-small: 14px;
+$font-medium: 18px;
+$font-large:20px;
+$font-large-ish: 30px;
+$font-super:40px;
+
+
+$widebreakpoint: 850px;
+$breakpoint: 1386px;
+$fullWidth:100%;
+$halfWidth:50%;
+
+
+
+$background-color_1: rgba(143, 100, 9, 0.5);
+$background-color_2: rgba(160, 160, 160, 0.2);
+$background-color_3: rgba(160, 160, 160, 0.4);
+$background-color_4: rgba(252, 199, 53, 0.5);
+$background-color_5: rgba(252, 199, 53, 0.767);
+$background-color_6: rgba(252, 199, 53, 0.89);
+$water-width: 175px;
+
+article, aside, footer, header, nav, section, body{
+    margin: $minmargin;
+    padding: $minpadding;
+}
+
+section{
+    float:right;
+}
+
+body{
+    font-family: $font-family;
+    color: $darktext-color;
+    //background-color: $background-light;
+    background-attachment:fixed;
+    height:100%;
+    background-image: linear-gradient($tertiary-color, $secondary-color);
+}
+#container{
+    max-width: 75%;
+    margin: $floatmargin;
+}
+header{ 
+    height: 100px;
+    text-align: center;
+    //background-color: $tertiary-color;
+}
+#maincontent{
+    margin-top: 80px;
+    padding: 10px 0;
+}
+h4{
+    font-size: $font-large-ish;
+    color: $primary-color;
+    padding: $minpadding;
+    margin: $minmargin;
+}
+
+h1, h2{
+    color:$darktext-color;
+    background-color: $secondary-color;
+    padding: $minpadding;
+}
+
+ul, h1, h2{
+    margin: $minmargin;
+    padding: $minpadding;
+}
+iframe{
+    float: right;
+}
+a{
+    color: $primary-color;
+}
+
+  .iframe{
+      float: right;
+  }
+
+  p{
+      font-size: $font-medium;
+      color: white;
+      
+
+  }
+.output, .output2{
+    font-size: $font-medium;
+      color: white; 
+}
+
+//mixin
+@mixin navMenu{
+
+    ul{
+    
+        list-style: none;
+        margin-bottom: 15px;
+        font-weight: bold;
+        font-size: $font-large;
+    }
+    li{
+        //float: center;
+       padding-left: 15%;
+       padding-right: 10%;
+    }
+    a{
+        display: block;
+        width: 140px;
+        float: left;
+        text-decoration: none;
+        color: $darktext-color;
+        background-color: $secondary-color;
+        margin: 5px 0;
+        &:hover, &:active, &:focus{
+        background-color: $background-light;
+       
+       // box-shadow: 1px 1px 3px rgba(0,0,0,.80);
+        //text-shadow: 1px 1px 3px rgba(0,0,0,.80);
+           
+        }
+        &:link, &:visited{
+            //background-color: $font-link-followed;
+        }
+        
+    }
+}
+
+
+#about{
+
+    background-color: $tertiary-color;
+    border: 5px solid #0b385f;
+    border-radius: 8px;
+
+    label1{
+        font-size: $font-large;
+    }
+    text1{
+        font-size: $font-medium;
+    }
+
+}
+
+#vision{
+    font-family: $secondary-font-famiy;
+    font-size: $font-super;
+    font-weight: bold; 
+    background-color: $secondary-color;
+    border-radius: 8px;
+    padding: 20px 40px 40px 40px;
+    img{
+        float: inline-end;
+    }
+
+    h1{
+        color: $primary-color;
+        text-shadow: 1px 1px 3px rgba(0,0,0,.80);
+    }
+    p{
+        font-size: $font-medium;
+        color: $primary-color;
+    }
+   
+    a{
+        font-size: $font-small;
+    }
+   // margin-bottom: 20px;
+
+}
+
+@mixin pod{
+    background-color: $primary-color;
+    padding: 10px 10px 10px 10px;
+    //width: 50%;
+    float: left;
+    text-align: center;
+    margin: 5px;
+    border-radius: 15px;
+    width: 50%;
+    
+
+    .podContent{
+        
+        margin-top: 5px;
+        width: 50%;
+        //height: 250px;
+        //background-color: yellow;
+        overflow: hidden;
+    }
+
+    #news & {
+        margin-top: 12px;
+        overflow: auto;
+    }
+   
+   
+
+
+
+}
+
+nav{
+    @include navMenu();
+    background-color: $primary-color;
+    padding: 20px;
+    text-align: center;
+}
+.pod{
+    @include pod;
+    width: 45%;
+}
+footer{
+    clear: both;
+    padding: 20px; 
+    color: $tertiary-color;
+    background-color: $primary-color;
+    p{
+        margin: 0 0 5px 0;
+        color: black;
+    }
+}
+
+
+// I give all credit to the below copyright, and their copyright license states the code is free to use without limitation 
+// Copyright (c) 2023 by Sehee Nathalie (https://codepen.io/seheekim/pen/BKYGZp)
+//
+.cylinder {
+	position: relative;
+	overflow: hidden;
+	margin: 0 auto;
+	width: $water-width;
+	height: 300px;
+	border-radius: 50px/25px;
+	background-color: $background-color_1;
+	&:before {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: $water-width;
+		height: 50px;
+		border-radius: 50px/25px;
+		background-color: $background-color_2;
+		content: '';
+	}
+	&:after {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: $water-width;
+		height: 50px;
+		border-radius: 50px/25px;
+		background-color: $background-color_3;
+		content: '';
+	}
+}
+.water {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: $water-width;
+	height: 0;
+	padding-top: 50px;
+	border-radius: 50px/25px;
+	background-color: $background-color_4;
+	transition: 0.3s linear;
+	&:before {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: $water-width;
+		height: 50px;
+		border-radius: 50px/25px;
+		background-color: $background-color_5;
+		content: '';
+	}
+	&:after {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: $water-width;
+		height: 50px;
+		border-radius: 50px/25px;
+		background-color: $background-color_6;
+		content: '';
+	}
+}
+.water--0 {
+	&:checked {
+		~ {
+			.cylinder {
+				.water {
+					bottom: -50px;
+				}
+			}
+		}
+	}
+}
+.water--30 {
+	&:checked {
+		~ {
+			.cylinder {
+				.water {
+					height: calc(250px * 0.3);
+				}
+			}
+		}
+	}
+}
+.water--50 {
+	&:checked {
+		~ {
+			.cylinder {
+				.water {
+					height: calc(250px * 0.5);
+				}
+			}
+		}
+	}
+}
+.water--90 {
+	&:checked {
+		~ {
+			.cylinder {
+				.water {
+					height: calc(250px * 0.95);
+				}
+			}
+		}
+	}
+}
+
+
+
+.menu-toggle {
+    display:none;
+    cursor:pointer;
+    padding: 10px;
+  
+        /* Define the styles for the three bars of the hamburger icon */
+        .bar {
+            width: 30px;
+            height: 3px;
+            background-color: #333;
+            margin: 6px 0;
+            transform: 0.4s;
+            margin-left: auto;
+        margin-right: auto;
+        }
+    }
+  
+ 
+  @media (max-width: $breakpoint) {
+    .menu-toggle {
+        display: block;
+    }
+  
+    .mobile-menu {
+        display: none;
+    
+        ul{
+        list-style: none;
+        padding: $minpadding;
+        margin: $minmargin;
+        text-align: center;
+  
+      li {
+ 
+        display: block;
+        a {
+            font-size: $font-small;
+          text-decoration: none;
+          color: black;
+    
+
+          
+            &:hover{
+              background: $background-light;
+            
+          }
+        }
+        }
+    } }
+  }
+  
+    .menu-toggle.active .bar:nth-child(1) {
+          transform: rotate(-45deg) translate(-5px, 6px);
+      }
+      .menu-toggle.active .bar:nth-child(2) {
+          opacity: 0;
+      }
+      .menu-toggle.active .bar:nth-child(3) {
+          transform: rotate(45deg) translate(-5px, -6px);
+      }

@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sean Radel</title>
+
+<link href="styles/styles.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+  <div id="container">
+    <header id="logo">
+      <img src="images/brewlogo.png" height=125 alt="Brewducation Logo">
+      <div class="menu-toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+        <nav class="navMenu">
+      
+            <ul class="mobile-menu">
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="brew.html">Brew</a></li>
+            <li><a href="author.html">Author</a></li>
+    
+        </ul>
+        </nav>
+       
+        
+      </header>
+
+
+  <div id="maincontent">
+    <section class="pod"> 
+
+        <h1>Select Ingredients</h1>
+               <!--https://www.w3schools.com/tags/tag_select.asp-->
+        <li>
+          <label for="Malt1">Choose a Base Malt:</label>
+          <select name="Malt1" id="Malt1">
+            <option value="Pilsner Malt">Pilsner malt</option>
+            <option value="Pale Malt">Pale malt</option>
+            <option value="Chocolate Malt">Chocolate malt</option>
+            <option value="Wheat Malt">Wheat Malt</option>
+          </select>
+        </li>
+
+        
+        <li>
+          <label for="Malt2">Choose an Optional Second Malt:</label>
+          <select name="Malt2" id="Malt2">
+            <option value="Roasted Barley">Roasted Barley</option>
+            <option value="Black Patent Malt">Black patent malt</option>
+            <option value="Crystal Malt">Crystal malt</option>
+            <option value="Munich Malt">Munich malt</option>
+            <option value="Corn">Corn</option>
+            <option value="No Extra Malt">None</option>
+          </select>
+        </li>
+        <li>
+          <label for="Yeast">Choose a Yeast:</label>
+          <select name="Yeast" id="Yeast">
+            <option value="Lager Yeast">Lager yeast</option>
+            <option value="Ale Yeast">Ale yeast</option>
+            <option value="Belgian Witbier Yeast">Belgian Witbier yeast</option>
+            <option value="Hefeweizen Yeast">Hefeweizen yeast</option>
+          </select>
+        </li>
+        <li>
+          <label for="Hops">Choose a Hop:</label>
+          <select name="Hops" id="Hops">
+            <option value="Saaz Hops">Saaz hops</option>
+            <option value="Cascade Hops">Cascade Hops</option>
+            <option value="East Kent Goldings Hops">East Kent Goldings Hops</option>
+            <option value="Hallertau Hops">Hallertau Hops</option>
+            <option value="Liberty Hops">Liberty Hops</option>
+            <option value="No Hops">None</option>
+          </select>
+        </li>
+        
+        <li>
+          <label for="Adjunct">Choose an Optional Adjunct:</label>
+          <select name="Adjunct" id="Adjunct">
+            <option value="Orange Peel">Orange Peel</option>
+            <option value="Raspberry">Raspberry</option>
+            <option value="Coriander">Coriander</option>
+            <option value="Cinnamon">Cinnamon</option>
+            <option value="Coffee">Coffee</option>
+            <option value="Vanilla">Vanilla</option>
+            <option value="Pumpkin">Pumpkin</option>
+            <option value="Chili">Chili</option>
+            <option value="No Adjunct">None</option>
+          </select>
+        </li>
+        <button onclick="brew()">BREW!</button>
+        
+        
+
+               
+
+                <h1>Tasting Notes</h1>
+                <span class="output"></span>
+                <h1>Production</h1>
+                <span class="output2"></span>
+                
+          
+        
+   
+      
+  
+      </section>
+  
+      <section class="pod"> 
+      <!---  <div class="pintglass"> -->
+         <!---    <div class="glass"></div>-->
+       <!---   <div class="topcircle"></div>-->
+       <!---  <div class="bottomcircle"></div>-->
+        <!--- Followed this method for making circles / background shade https://www.w3schools.com/howto/howto_css_circles.asp-->
+
+        <input type="radio" name="water" class="water--0" id="r0" value="0">
+        <label for="r0">none</label>
+        <input type="radio" name="water" class="water--30" id="r1" value="3">
+        <label for="r1">3bbl</label>
+        <input type="radio" name="water" class="water--50" id="r2" value="5">
+        <label for="r2">5bbl</label>
+        <input type="radio" name="water" class="water--90" id="r3" value="10">
+        <label for="r3">10bbl</label>
+
+        <div class="cylinder">
+            <div class="water"></div>
+        </div>
+
+         </section> 
+  </div>
+  <footer>
+    &copy; Sean Radel 2023. seanradel2020 Brewducation, No Rights Reserved
+</footer>
+</div>
+
+<script src="scripts/script.js"></script>
+</body>
+</html>
